@@ -1,0 +1,17 @@
+.blue {
+    border: solid 1px #008fd3;
+    background-color: #008fd3;
+    color: #ffffff;
+    width: 8rem;
+    font-family: Arial;
+    padding: 10px;
+}
+
+.outline {
+    border: solid 1px #008fd3;
+    color: #008fd3;
+    background-color: transparent;
+    width: 8rem;
+    font-family: Arial;
+    padding: 10px;
+}

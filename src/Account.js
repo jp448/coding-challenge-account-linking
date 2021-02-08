@@ -1,22 +1,22 @@
 import React from "react";
-import './Info.css';
+import './Account.css';
 import Info from "./Info";
 
 function Account(props) {
     let unlinkedaccs = [];
     let linkedaccs = [];
-    props.data.emails.map((email) => {
-        props.data.accounts[email].unlinkedAccounts.map((info) => {
+    props.data.emails.forEach((email) => {
+        props.data.accounts[email].unlinkedAccounts.forEach((info) => {
             unlinkedaccs.push(<Info updateHandle={props.updateHandle} UID={props.data.uid} infoData={info} islinked={false}/>);
         })
-        props.data.accounts[email].linkedAccounts.map((info) => {
+        props.data.accounts[email].linkedAccounts.forEach((info) => {
             linkedaccs.push(<Info updateHandle={props.updateHandle} UID={props.data.uid} infoData={info} islinked={true} />);
         })
     })
 
   return (
     <div className="Account">
-        <p>{props.data.email}</p>
+        <p className="bold">{props.data.email} <span>({linkedaccs.length} of {linkedaccs.length + unlinkedaccs.length} Linked)</span></p>
         {linkedaccs}
         {unlinkedaccs}
     </div>

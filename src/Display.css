@@ -1,8 +1,12 @@
 .Display {
     width: 60%;
     margin: auto;
-    padding: 30px;
+    padding: 25px 85px;
     border-radius: 4px;
     box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.16);
     background-color: #ffffff;
+}
+
+.Display .header {
+    margin-bottom: 5rem;
 }

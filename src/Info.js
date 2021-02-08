@@ -17,11 +17,13 @@ function Info(props) {
 
   return (
     <div className="Info">
-        <div>
+        <div className="text">
             <p>Username: {props.infoData.username}</p>
             <p>Company: {props.infoData.companyName}</p>
         </div>
-        {props.islinked ? <Button onClick={null} content="Linked" /> : <Button onClick={handleOnClick} content="Link Account" />}
+        <div>
+            {props.islinked ? <Button onClick={null} content="Linked" /> : <Button onClick={handleOnClick} content="Link Account" />}
+        </div>
     </div>
   );
 }
